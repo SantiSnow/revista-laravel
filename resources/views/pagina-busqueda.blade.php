@@ -13,11 +13,11 @@
 
     @foreach($articulos as $i)
 
-        <img src="../{{ $i->FOTO }}" alt="imagen descriptiva de la noticia" class="ImagenNoticia">
-        <p>{{ $i->NOMBREARTICULO }}</p>
+    <img src="public/{{ $i->FOTO }}" alt="imagen descriptiva de la noticia" class="ImagenNoticia">
+        <a href="/articulo/{{ $i->ID }}"><h4>{{ $i->NOMBREARTICULO }}</h4></a>
         <p>{{ $i->DESCRIPCION }}</p>
         <p>{{ $i->FECHA}}</p>
-        <a href="{{ $i->URL }}" class="btn btn-primary">Leer mas...</a>
+        <a href="/articulo/{{ $i->ID }}" class="btn btn-primary">Leer mas...</a>
         <br />
         <hr />
         <br />
