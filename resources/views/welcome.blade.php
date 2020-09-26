@@ -46,6 +46,8 @@
                 @endforeach
             </div>
         </div>
+        <hr>
+
 
         @endsection
 
