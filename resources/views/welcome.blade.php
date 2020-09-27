@@ -55,6 +55,7 @@
                     <div class="row">
                         @foreach($articulos as $i)
                         <div class="col-12 col-md-6 col-lg-4">
+                            <img src="../{{ $i->FOTO }}" alt="imagen descriptiva de la noticia" class="ImagenNoticia">
                             <h4><strong>{{ $i->NOMBREARTICULO }}</strong></h4>
                             <p>{{ $i->DESCRIPCION }}</p>
                             <p><small>Publicado: {{ $i->FECHA }}</small></p>
