@@ -39,21 +39,42 @@
     @endsection
 
     @section("contenido")
-    <h2>Artículos más recientes</h2>
 
-        
-        @foreach($articulos as $i)
+    <div class="row">
         <div class="col-6">
+        <h2>Artículos más recientes</h2>
+        <br />
+        @foreach($articulos as $i)
+        
             <img src="../{{ $i->FOTO }}" alt="imagen descriptiva de la noticia" class="ImagenNoticia">
             <a class="titulo-noticia" href="/articulo/{{ $i->ID }}"><h4>{{ $i->NOMBREARTICULO }}</h4></a>
             <p>{{ $i->DESCRIPCION }}</p>
-            <p>{{ $i->FECHA}}</p>
+            <p>Publicado: {{ $i->FECHA}}</p>
             <p><a href="/articulo/{{ $i->ID }}" class="btn btn-primary">Leer mas...</a>
             <br />
             <hr>
-        </div>
             <br />
         @endforeach
+        </div>
+        <div class="col-6">
+        <h2>Cursos de programación e informática</h2>
+        <br />
+
+        @foreach($cursos as $j)
+
+            <img src="Articulos/programacionCursoPOO.jpg" alt="imagen descriptiva del cursos" class="ImagenNoticia">
+            <a class="titulo-noticia" href="/cursos/{{ $j->id }}"><h4>{{ $j->titulo }}</h4></a>
+            <p>{{ $j->descripcion }}</p>
+            <p>Publicado: {{ $j->fecha }}</p>
+            <p><a href="/cursos/{{ $j->id }}" class="btn btn-primary">Leer mas...</a>
+            <br />
+            <hr>
+            <br />
+
+        @endforeach
+       
+        </div>
+    </div>
 
     @endsection
 

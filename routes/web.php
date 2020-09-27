@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Articulo;
 use App\Comentario;
+use App\Curso;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -85,7 +86,7 @@ Route::get('/categorias', function(){
 });
 
 
-//cada producto
+//cada articulo
 Route::get('/articulo/{id}', function($id){
 
     $article = Articulo::find($id);
@@ -93,6 +94,14 @@ Route::get('/articulo/{id}', function($id){
     $comentarios = DB::table('comentarios')->where('articulo_id', $id)->get();
 
     return view('articulo', compact('article'), compact('comentarios'));
+});
+
+//cada curso
+Route::get('/cursos/{id}', function($id){
+
+    $curso = Curso::find($id);
+
+    return view('curso', compact('curso'));
 });
 
 //rutas categorias
@@ -109,7 +118,10 @@ Route::get('/articulos-programacion', function(){
         ->where('tags','LIKE','%programacion%')
         ->orderBy('id', 'desc')
         ->get();
-    return view('/articulos-programacion', compact('articulos'));
+    $cursos = DB::table('cursos')
+        ->orderBy('id', 'desc')
+        ->get();
+    return view('/articulos-programacion', compact('articulos'), compact('cursos'));
 });
 
 Route::get('/articulos-smartphones', function(){

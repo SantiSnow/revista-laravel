@@ -38,45 +38,46 @@
         @section("contenido")
         @parent
         <section>
-			<h3>{{ $article->NOMBREARTICULO }}</h3>
-			<div class="row">{!! $article->CONTENIDO !!}</div>
-            <br /><br />
-            <p>Publicado el: {{ $article->FECHA }}</p>
+            <div class="col-12">
+                <h3>{{ $article->NOMBREARTICULO }}</h3>
+                <div class="row">{!! $article->CONTENIDO !!}</div>
+                <br /><br />
+                <p>Publicado el: {{ $article->FECHA }}</p>
 
-            
-            <hr>
-            <br />
-            <br />
-            <br />
-            <h4>Comentarios:</h4>
-            <br />
-            
-            @foreach($comentarios as $i)
-                <div class="comentario">
-                    <p>{{ $i->nombre }}</p>
-                    <p>{{ $i->comentario }}</p>
-                </div>
-            @endforeach
-
-            <br /><br />
-            <br /><br />
-            <h4>Dejanos tu comentario:</h4>
-
-            <form class="form-group" method="post" action="{{ url('/comentario') }}">
-            @csrf
-                <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" class="form-control" required />
+                
+                <hr>
                 <br />
-
-                <input name="id" value="{{$article->ID}}" hidden />
-
-                <label for="comentario">Comentario</label>
-                <input type="textarea" name="comentario" class="form-control" required />
                 <br />
+                <br />
+                <h4>Comentarios:</h4>
+                <br />
+                
+                @foreach($comentarios as $i)
+                    <div class="comentario">
+                        <p>{{ $i->nombre }}</p>
+                        <p>{{ $i->comentario }}</p>
+                    </div>
+                @endforeach
 
-                <input type="submit" class="btn btn-primary" value="Enviar comentario" />
-            </form>
+                <br /><br />
+                <br /><br />
+                <h4>Dejanos tu comentario:</h4>
 
+                <form class="form-group" method="post" action="{{ url('/comentario') }}">
+                @csrf
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" class="form-control" required />
+                    <br />
+
+                    <input name="id" value="{{$article->ID}}" hidden />
+
+                    <label for="comentario">Comentario</label>
+                    <input type="textarea" name="comentario" class="form-control" required />
+                    <br />
+
+                    <input type="submit" class="btn btn-primary" value="Enviar comentario" />
+                </form>
+            </div>
         </section>
 
         @endsection
