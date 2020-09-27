@@ -63,6 +63,7 @@
             <li class="nav-item"> <a class="nav-link" href="{{ url('/') }}">Home</a> </li>
             <li class="nav-item"> <a class="nav-link" href="{{ url('/articulos/todos') }}">Artículos</a> </li>
             <li class="nav-item"> <a class="nav-link" href="{{ url('/categorias') }}">Categorias </a> </li>
+            <li class="nav-item"> <a class="nav-link" href="{{ url('/articulos-programacion') }}">Cursos de informática </a> </li>
             <li class="nav-item"> <a class="nav-link" href="{{ url('/sobreNosotros') }}">Sobre Nosotros</a> </li>
         </ul>
         
