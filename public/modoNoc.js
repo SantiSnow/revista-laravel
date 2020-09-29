@@ -6,6 +6,7 @@
           
           $('body').css('background-color', 'black');
           $('body').css('color', 'white');
+          $('.card').css('background-color', 'black');
           $('#titulo1').css('color', 'black'); 
           $('#titulo2').css('color', 'black'); 
           $('#tituloEmail ').css('color', 'black');
@@ -32,6 +33,7 @@
       $('#modoNoc').click(function(){
             $('body').css('background-color', 'black');
             $('body').css('color', 'white');
+            $('.card').css('background-color', 'black');
             $('#titulo1').css('color', 'black'); 
             $('#titulo2').css('color', 'black'); 
             $('#tituloEmail ').css('color', 'black');
@@ -48,6 +50,7 @@
       $('#modoDia').click(function(){
             $('body').css('background-color', 'white');
             $('body').css('color', 'black');
+            $('.card').css('background-color', 'white');
             
           
             var modoElegido = 'claro';
