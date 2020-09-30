@@ -7,6 +7,7 @@
           $('body').css('background-color', 'black');
           $('body').css('color', 'white');
           $('.card').css('background-color', 'black');
+          $('.comentario').css('color', 'black');
           $('#titulo1').css('color', 'black'); 
           $('#titulo2').css('color', 'black'); 
           $('#tituloEmail ').css('color', 'black');
@@ -23,6 +24,7 @@
           
           $('body').css('background-color', 'white');
           $('body').css('color', 'black');
+          $('.comentario').css('color', 'black');
           
           var modoElegido = 'claro';
           
@@ -34,6 +36,7 @@
             $('body').css('background-color', 'black');
             $('body').css('color', 'white');
             $('.card').css('background-color', 'black');
+            $('.comentario').css('color', 'black');
             $('#titulo1').css('color', 'black'); 
             $('#titulo2').css('color', 'black'); 
             $('#tituloEmail ').css('color', 'black');
@@ -51,6 +54,7 @@
             $('body').css('background-color', 'white');
             $('body').css('color', 'black');
             $('.card').css('background-color', 'white');
+            $('.comentario').css('color', 'black');
             
           
             var modoElegido = 'claro';
