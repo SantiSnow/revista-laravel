@@ -14,6 +14,7 @@
           $('.negro').css('color', 'black');
           $('.comentarioEncontrado').css('color', 'black');
           $('.iconosClaros').hide();
+          $('.comentario').css('color', 'black');
           
           
           var modoElegido = 'oscuro';
@@ -43,7 +44,7 @@
             $('.negro').css('color', 'black');
             $('.comentarioEncontrado').css('color', 'black');
             
-            
+            $('.comentario').css('color', 'black');
             
             var modoElegido = 'oscuro';
           
