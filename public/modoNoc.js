@@ -33,7 +33,7 @@
       }
     }     
           //modo nocturno
-      $('#modoNoc').click(function(){
+      $('#modoNoc').on('click', function(){
             $('body').css('background-color', 'black');
             $('body').css('color', 'white');
             $('.card').css('background-color', 'black');
@@ -51,7 +51,9 @@
             localStorage.setItem("modoElegido", modoElegido);
       });
           //modo dia
-      $('#modoDia').click(function(){
+          //on. ('click'... es un metodo mas moderno que .click, y funciona mejor
+          //para contenido generado dinamicamente
+      $('#modoDia').on('click', function(){
             $('body').css('background-color', 'white');
             $('body').css('color', 'black');
             $('.card').css('background-color', 'white');
