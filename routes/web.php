@@ -174,6 +174,20 @@ Route::post('/comentario', function(Request $req){
 
 
 //subir articulos:
-Route::post('/insertar-art', function(){
+Route::post('/insertar-art', function(Request $req){
     $articulo = new Articulo;
+
+    $articulo->NOMBREARTICULO = $req->NOMBREARTICULO;
+    $articulo->DESCRIPCION = $req->DESCRIPCION;
+    $articulo->FOTO = $req->FOTO;
+    $articulo->TAGS = $req->TAGS;
+    $articulo->FECHA = $req->FECHA;
+    $articulo->CONTENIDO = $req->CONTENIDO;
+   
+    $resultado = $articulo->save();
+
+    if($resultado == 1){
+        return redirect('/articulos/todos');
+    }
+
 });

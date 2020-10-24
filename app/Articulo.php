@@ -21,4 +21,6 @@ class Articulo extends Model
     public function comentarios(){
         return $this->hasMany("App\Comentario", "articulo_id");
     }
+
+    public $timestamps = false;
 }

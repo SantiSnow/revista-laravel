@@ -21,20 +21,25 @@
                         <br />
                         <br />
                         <form class="form-group" method="post" action="{{ url('/insertar-art') }}">
+                            @csrf
                             <label for="NOMBREARTICULO">Título</label>
                             <input type="text" name="NOMBREARTICULO" class="form-control" placeholder="Nombre del artículo" required />
                             <br />
 
-                            <label for="DESCRIPCION">Título</label>
-                            <input type="text" name="DESCRIPCION" class="form-control" placeholder="Descripción corta del artículo" required />
+                            <label for="DESCRIPCION">Descripción</label>
+                            <textarea name="DESCRIPCION" class="form-control" placeholder="Descripción corta del artículo" rows="5" required></textarea>
                             <br />
 
-                            <label for="CONTENIDO">Título</label>
-                            <input type="textarea" name="CONTENIDO" class="form-control" placeholder="Contenido del artículo" required />
+                            <label for="CONTENIDO">Contenido</label>
+                            <textarea name="CONTENIDO" class="form-control" placeholder="Contenido del artículo" rows="10" required></textarea>
                             <br />
 
                             <label for="FOTO">Foto</label>
                             <input type="text" name="FOTO" class="form-control" placeholder="Nombre del archivo" required />
+                            <br />
+
+                            <label for="FECHA">Fecha</label>
+                            <input type="text" name="FECHA" class="form-control" placeholder="Fecha del articulo" required />
                             <br />
 
                             <label for="TAGS">Tags</label>
