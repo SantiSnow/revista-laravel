@@ -6,6 +6,14 @@ use Illuminate\Support\Facades\DB;
 use App\Articulo;
 use App\Comentario;
 use App\Curso;
+use App\Http\Controllers\Auth\VerificationController;
+use App\Http\Controllers\Auth\ConfirmPasswordController;
+use App\Http\Controllers\Auth\ForgotPasswordController;
+use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\ResetPasswordController;
+
+use Vendor\Artesaos\SeoTools\SeoTools;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
